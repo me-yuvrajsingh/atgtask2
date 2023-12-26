@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* z-index: 10; */
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.none {
+    display: none !important;
+}
+
+section {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.second {
+    /* z-index: 9; */
+    background-color: #1b0260;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #6015ab;
+    color: #fefefd;
+}
+
+.up {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    /* z-index: 3; */
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.up-wrapper {
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.small-text-up {
+    text-align: left !important;
+}
+
+.big-text {
+    height: fit-content;
+    width: 100%;
+    text-align: right;
+    font-size: 3.8rem;
+    font-weight: 500;
+}
+
+.svg {
+    background-color: #6015ab;
+    height: 19rem;
+    position: fixed;
+    left: 35%;
+    top: 12%;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.dots-nav {
+    cursor: pointer;
+    z-index: 25;
+}
+
+.small-text, .small-text-up {
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
+    word-spacing: 4px;
+}
+
+.down {
+    height: 50%;
+    width: 100%;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.down-wrapper {
+    width: 30%;
+}
+
+.down-left-big {
+    font-size: 2.7rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.down-left-small {
+    line-height: 1.6em;
+}
+
+.down-down {
+    display: flex;
+    justify-content: space-between;
+}
+
+.down-down-right {
+    font-weight: 100;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.right img {
+    height: 75%;
+    overflow-y: hidden;
+}
+
+/* second section  */
+
+.second .left {
+    background-color: #352091;
+}
+
+.second .right {
+    background-color: transparent;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imgs {
+    width: 80%;
+    display: flex;
+    height: 100%;
+}
+
+.lt-img, .rt-img {
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.lt-img {
+    align-items: end;
+    overflow-y: hidden;
+    overflow-y: hidden;
+}
+
+.lt-img img {
+    transform: translateY(2em);
+}
+
+.rt-img {
+    align-items: flex-start;
+    overflow-y: hidden;
+    transform: translateY(-5em);
+}
+
+.second .right img {
+    height: 65%;
+}
+
+/* third section  */
+
+.third .svg {
+    top: 8%;
+}
+
+.third {
+
+    background-color: #151747;
+}
+
+.third .left {
+    background-color: #0f1239;
+}
+
+.up-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.third .big-text {
+    height: 45%;
+    width: 100%;
+}
+
+.third .big-text img {
+    width: 100%;
+    height: 100%;
+}
+
+.third .right {
+    background-color: transparent;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+/* fourth section  */
+.fourth {
+    background-color: #0e141a;
+
+}
+
+.fourth .left {
+    background-color: #17273c;
+}
+
+.fourth .right {
+    background-color: transparent;
+    /* z-index: 9; */
+    width: 50%;
+    display: flex;
+    height: 100%;
+}
+
+.r-right, .r-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.r-right-up, .r-right-down {
+    height: 50%;
+    width: 100%;
+}
+
+.r-right-down {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.r-right-up img {
+    transform: translateY(-4rem);
+}
+
+.r-left-up {
+    height: 70%;
+    width: 100%;
+    display: flex;
+}
+
+.r-left-up-l, .r-left-up-r {
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.r-left-up-l {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.r-left-up-r {
+    transform: translate(10px, -12rem);
+}
+
+.r-left-up-r {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.r-left-down {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+/* fifth section  */
+.fifth {
+    background-color: #2cccdb;
+
+}
+
+.fifth .left {
+    background-color: #154fa2;
+}
+
+.fifth .right {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fifth .imgs {
+    width: 90%;
+    display: flex;
+    height: 100%;
+}
+
+.fifth .imgs img {
+    width: 95%;
+    height: auto;
+}
+
+.fifth .imgs-col-1, .imgs-col-2 {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+}
+
+.imgs-col-3 {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* sixth section  */
+.sixth .left {
+    background-color: #022d92;
+}
+
+.sixth .right {
+    /* z-index: 9; */
+    background-image: url('/images/interior.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* seventh sec  */
+.seventh {
+    background-color: #01b768;
+
+}
+
+.seventh .left {
+    background-color: #00824a;
+}
+
+.seventh .right {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+}
+
+.seventh .imgs {
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.seventh .down {
+    padding: 0 3rem;
+}
+
+.seventh img {
+    width: 98%;
+}
+
+.seventh .down-wrapper {
+    width: 50%;
+}
+
+.seventh .imgs1 {
+    transform: translateY(4rem);
+}
+
+.seventh .imgs2 {
+    transform: translate(-6rem, 1rem);
+    /* z-index: 9; */
+}
