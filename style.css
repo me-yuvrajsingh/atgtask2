@@ -77,14 +77,19 @@ section {
     text-align: right;
     font-size: 3.8rem;
     font-weight: 500;
+    margin-top: -7px;
+}
+
+.third .big-text{
+    margin: 7px 0;
 }
 
 .svg {
     background-color: #6015ab;
     height: 19rem;
     position: fixed;
-    left: 35%;
-    top: 12%;
+    left: calc(50vw - 13rem);
+    top: calc(50vh - 15rem);
     z-index: 2;
     border-radius: 50%;
 }
@@ -211,6 +216,7 @@ section {
 .up-wrapper {
     display: flex;
     justify-content: flex-end;
+    line-height: 1.2;
 }
 
 .third .big-text {
