@@ -4,12 +4,7 @@
     width: 100vw;
     overflow: hidden;
 }
-.item{
-    display: none!important;
-}
-.act-item{
-    display: flex!important;
-}
+
 .dots-indicator {
     position: fixed;
     bottom: 20px;
@@ -33,8 +28,6 @@
     background-color: white;
     border-color: gray;
 }
-
-
 
 
 .owl-carousel .item {
