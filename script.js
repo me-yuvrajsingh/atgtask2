@@ -54,9 +54,9 @@ function defaultSet() {
   });
 }
 
-// for the exit animation of the text and images
+// for the exit animation of elements
 function exitAnimation() {
-  console.log("exit");
+  console.log("exit animation triggered!");
   document.querySelectorAll(".animate__fadeInDown").forEach((e) => {
     e.classList.add("animate__fadeOutUp");
   });
@@ -72,11 +72,17 @@ function exitAnimation() {
   document.querySelectorAll(".animate__fadeInRight").forEach((e) => {
     e.classList.add("animate__fadeOutRight");
   });
+  document.querySelectorAll(".animate__zoomOut").forEach((e) => {
+    e.classList.add("animate__zoomIn");
+  });
+  document.querySelectorAll(".animate__zoomIn").forEach((e) => {
+    e.classList.add("animate__zoomOut");
+  });
 }
 
 // for the entry animation of the text and images
 function entryAnimation() {
-  console.log("entry");
+  console.log("entry animation triggered!");
   document.querySelectorAll(".animate__fadeInDown").forEach((e) => {
     e.classList.remove("animate__fadeOutUp");
   });
@@ -91,6 +97,12 @@ function entryAnimation() {
   });
   document.querySelectorAll(".animate__fadeInRight").forEach((e) => {
     e.classList.remove("animate__fadeOutRight");
+  });
+  document.querySelectorAll(".animate__zoomIn").forEach((e) => {
+    e.classList.remove("animate__zoomOut");
+  });
+  document.querySelectorAll(".animate__zoomOut").forEach((e) => {
+    e.classList.remove("animate__zoomIn");
   });
 }
 
@@ -131,12 +143,32 @@ function handleScroll(event) {
   // Check the deltaY value to determine scroll direction
   if (event.deltaY < 0) {
     console.log('Scrolling upward');
-    showSec(active-1, secProp[active-1].bgcolor, secProp[active-1].sdArray)
+
+    // to directly go to the last section on a single scroll 
+    // if(active === 0){
+    //   active = 7;
+    // }
+
+    try {
+      showSec(active-1, secProp[active-1].bgcolor, secProp[active-1].sdArray)
+    } catch (error) {
+      console.log("Can't Scroll Backward: As this is the first page")      
+    }
 
     // Perform actions for upward scroll
   } else if (event.deltaY > 0) {
     console.log('Scrolling downward');
-    showSec(active+1, secProp[active+1].bgcolor, secProp[active+1].sdArray)
+
+    // to directly go to the first section on a single scroll 
+    // if(active+1 === 7){
+    //   active=-1;
+    // }
+    
+    try {
+      showSec(active+1, secProp[active+1].bgcolor, secProp[active+1].sdArray)
+    } catch (error) {
+      console.log("Can't Scroll Forward: As this is the last page")
+    }
     // Perform actions for downward scroll
   } else {
     // deltaY is 0, indicating no vertical scroll
